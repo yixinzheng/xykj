@@ -44,11 +44,15 @@
             </Col>
         </Row>
         <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
-            <Form-item label="用户名" prop="name">
-                <Input v-model="formValidate.name" type="password" placeholder="请输入用户名"></Input>
+            <Form-item label="用户名" prop="user">
+                <Input v-model="formValidate.name" type="password" placeholder="请输入用户名">
+                <Icon type="ios-person-outline" slot="prepend"></Icon>
+                </Input>
             </Form-item>
-            <Form-item label="密码" prop="pwd">
-                <Input v-model="formValidate.pwd" type="password" placeholder="请输入密码"></Input>
+            <Form-item label="密码" prop="password">
+                <Input v-model="formValidate.pwd" type="password" placeholder="请输入密码">
+                <Icon type="ios-locked-outline" slot="prepend"></Icon>
+                </Input>
             </Form-item>
             <Form-item>
                 <Button type="primary" @click="handleSubmit('formValidate')">提交</Button>
